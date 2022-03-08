@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource/jost": "^4.5.4",
     "babel-plugin-styled-components": "^2.0.6",
     "gatsby": "^4.9.2",
     "gatsby-plugin-image": "^2.9.0",
@@ -25,5 +26,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "gatsby-plugin-root-import": "^2.0.8"
   }
 }
