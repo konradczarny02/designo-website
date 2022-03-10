@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Logo from "src/components/atoms/Logo";
 import Hamburger from "src/components/atoms/Hamburger";
 import styled from "styled-components";
@@ -9,13 +9,44 @@ export const NavigationWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+`;
+
+export const MobileNav = styled.ul`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 230px;
+  background-color: ${({theme}) => theme.colors.darkGrey};
+  display: flex;
+  flex-direction: column;
+  padding: 48px 24px;
+  justify-content: space-between;
+  z-index: -10;
+  transform: ${({isOpen}) => isOpen ? 'translateY(-100%)' : 'translateY(105px)'};
+  transition: transform 0.5s ease-in-out;
+
+  li {
+    list-style: none;
+    font-size: 24px;
+    color: ${({theme}) => theme.colors.white};
+    font-weight: 400;
+  }
 `;
 
 const Navigation = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
     return (
         <NavigationWrapper>
-            <Logo isBlack={true} />
-            <Hamburger />
+            <Logo isBlack={true}/>
+            <Hamburger onClick={() => setIsOpen(prevState => !prevState)}/>
+            <MobileNav isOpen={isOpen}>
+                <li>OUR COMPANY</li>
+                <li>LOCATIONS</li>
+                <li>CONTACT</li>
+            </MobileNav>
         </NavigationWrapper>
     )
 }

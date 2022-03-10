@@ -15,9 +15,9 @@ const HamburgerWrapper = styled.div`
   }
 `;
 
-const Hamburger = () => {
+const Hamburger = (props) => {
     return (
-        <HamburgerWrapper>
+        <HamburgerWrapper {...props}>
             <div></div>
             <div></div>
             <div></div>
