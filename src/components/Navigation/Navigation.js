@@ -24,14 +24,36 @@ export const MobileNav = styled.ul`
   padding: 48px 24px;
   justify-content: space-between;
   z-index: -10;
-  transform: ${({isOpen}) => isOpen ? 'translateY(-100%)' : 'translateY(105px)'};
+  transform: ${({isOpen}) => isOpen ? 'translateY(105px)' : 'translateY(-100%)'};
   transition: transform 0.5s ease-in-out;
+  
+  @media (min-width: 650px) {
+    display: none;
+  }
 
   li {
     list-style: none;
     font-size: 24px;
     color: ${({theme}) => theme.colors.white};
     font-weight: 400;
+  }
+`;
+
+export const DesktopNav = styled.ul`
+  display: none;
+  
+  @media (min-width: 650px) {
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
+    align-items: center;
+    
+    li {
+      list-style: none;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.15rem;
+    }
   }
 `;
 
@@ -42,6 +64,11 @@ const Navigation = () => {
         <NavigationWrapper>
             <Logo isBlack={true}/>
             <Hamburger onClick={() => setIsOpen(prevState => !prevState)}/>
+            <DesktopNav>
+                <li>OUR COMPANY</li>
+                <li>LOCATIONS</li>
+                <li>CONTACT</li>
+            </DesktopNav>
             <MobileNav isOpen={isOpen}>
                 <li>OUR COMPANY</li>
                 <li>LOCATIONS</li>

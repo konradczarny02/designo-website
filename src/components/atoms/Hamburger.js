@@ -7,6 +7,10 @@ const HamburgerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (min-width: 650px) {
+    display: none;
+  }
   
   div {
     width: 100%;
