@@ -18,7 +18,7 @@ export const MobileNav = styled.ul`
   top: 0;
   width: 100%;
   height: 230px;
-  background-color: ${({theme}) => theme.colors.darkGrey};
+  background-color: ${({theme}) => theme.colors.black};
   display: flex;
   flex-direction: column;
   padding: 48px 24px;
