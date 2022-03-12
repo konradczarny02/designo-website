@@ -9,6 +9,12 @@ export const FooterWrapper = styled.footer`
   padding-top: 240px;
   width: 100%;
   background-color: ${({theme}) => theme.colors.black};
+  
+  div:first-child {
+    @media (min-width: 650px) {
+      order: -2;
+    }
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -17,6 +23,11 @@ export const ContentWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   width: 90%;
+  
+  @media (min-width: 650px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 export const Line = styled.div`
@@ -24,12 +35,20 @@ export const Line = styled.div`
   height: 1px;
   margin: 32px 0;
   background-color: ${({theme}) => theme.colors.darkGrey};
+  
+  @media (min-width: 650px) {}
 `;
 
 export const Nav = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  @media (min-width: 650px) {
+    order: -1;
+    flex-direction: row;
+    margin-left: auto;
+  }
 
   li {
     list-style: none;
@@ -37,6 +56,10 @@ export const Nav = styled.ul`
     color: ${({theme}) => theme.colors.white};
     font-weight: 300;
     margin: 16px 0;
+    
+    @media (min-width: 650px) {
+      margin: 16px 20px;
+    }
   }
 `
 
@@ -47,6 +70,11 @@ export const AddressInfo = styled.div`
   align-items: center;
   font-size: 16px;
   color: ${({theme}) => theme.colors.lightGrey};
+  
+  @media (min-width: 650px) {
+    width: calc(100% / 3);
+    align-items: flex-start;
+  }
 
   h4 {
     font-weight: 700;
