@@ -4,14 +4,12 @@ import Logo from "src/components/atoms/Logo";
 import SocialIcons from "src/components/molecules/SocialIcons/SocialIcons";
 
 export const FooterWrapper = styled.footer`
-  position: absolute;
-  bottom: 0;
   padding-top: 240px;
   width: 100%;
   background-color: ${({theme}) => theme.colors.black};
   
   div:first-child {
-    @media (min-width: 650px) {
+    @media (min-width: 700px) {
       order: -2;
     }
   }
@@ -24,7 +22,7 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   width: 90%;
   
-  @media (min-width: 650px) {
+  @media (min-width: 700px) {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -36,7 +34,7 @@ export const Line = styled.div`
   margin: 32px 0;
   background-color: ${({theme}) => theme.colors.darkGrey};
   
-  @media (min-width: 650px) {}
+  @media (min-width: 700px) {}
 `;
 
 export const Nav = styled.ul`
@@ -44,7 +42,7 @@ export const Nav = styled.ul`
   flex-direction: column;
   align-items: center;
   
-  @media (min-width: 650px) {
+  @media (min-width: 700px) {
     order: -1;
     flex-direction: row;
     margin-left: auto;
@@ -57,7 +55,7 @@ export const Nav = styled.ul`
     font-weight: 300;
     margin: 16px 0;
     
-    @media (min-width: 650px) {
+    @media (min-width: 700px) {
       margin: 16px 20px;
     }
   }
@@ -71,7 +69,7 @@ export const AddressInfo = styled.div`
   font-size: 16px;
   color: ${({theme}) => theme.colors.lightGrey};
   
-  @media (min-width: 650px) {
+  @media (min-width: 700px) {
     width: calc(100% / 3);
     align-items: flex-start;
   }

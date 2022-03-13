@@ -4,7 +4,9 @@ import Hamburger from "src/components/atoms/Hamburger";
 import styled from "styled-components";
 
 export const NavigationWrapper = styled.nav`
-  padding: 35px 24px;
+  margin: 0 auto;
+  padding: 35px 5%;
+  width: 100%;
   background-color: ${({theme}) => theme.colors.white};
   display: flex;
   justify-content: space-between;
@@ -23,11 +25,11 @@ export const MobileNav = styled.ul`
   flex-direction: column;
   padding: 48px 24px;
   justify-content: space-between;
-  z-index: -10;
+  z-index: -1;
   transform: ${({isOpen}) => isOpen ? 'translateY(105px)' : 'translateY(-100%)'};
   transition: transform 0.5s ease-in-out;
   
-  @media (min-width: 650px) {
+  @media (min-width: 700px) {
     display: none;
   }
 
@@ -42,7 +44,7 @@ export const MobileNav = styled.ul`
 export const DesktopNav = styled.ul`
   display: none;
   
-  @media (min-width: 650px) {
+  @media (min-width: 700px) {
     display: flex;
     justify-content: space-between;
     width: 380px;

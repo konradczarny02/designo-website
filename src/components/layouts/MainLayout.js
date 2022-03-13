@@ -1,15 +1,16 @@
-import React from "react";
-import {ThemeProvider} from "styled-components";
-import {GlobalStyle} from "src/assets/styles/GlobalStyle";
-import {theme} from "src/assets/styles/theme";
+import React from 'react'
+import Navigation from "src/components/organisms/Navigation/Navigation";
+import Footer from "src/components/organisms/Footer/Footer";
+import ThemeLayout from "src/components/layouts/ThemeLayout";
 
 const MainLayout = ({children}) => {
     return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyle/>
+        <ThemeLayout>
+            <Navigation />
             {children}
-        </ThemeProvider>
+            <Footer />
+        </ThemeLayout>
     )
 }
 
-export default MainLayout;
+export default MainLayout
