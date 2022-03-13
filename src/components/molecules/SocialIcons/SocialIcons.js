@@ -7,7 +7,7 @@ export const SocialIconsWrapper = styled.ul`
   padding: 24px 0 64px;
   justify-content: flex-end;
 
-  @media (min-width: 650px) {
+  @media (min-width: 700px) {
     width: calc(100% / 3);
   }
 

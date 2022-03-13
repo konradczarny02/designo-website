@@ -8,7 +8,7 @@ const HamburgerWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  @media (min-width: 650px) {
+  @media (min-width: 700px) {
     display: none;
   }
   
