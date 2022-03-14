@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import LogoIcon from 'src/assets/images/logo.svg'
+import LogoIcon from 'src/icons/logo.svg'
 
 export const LogoWrapper = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ export const LogoWrapper = styled.div`
 const Logo = ({isBlack}) => {
     return (
         <LogoWrapper isBlack={isBlack}>
-            <LogoIcon/>
+            <LogoIcon />
             <h2>DESIGNO</h2>
         </LogoWrapper>
     )

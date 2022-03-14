@@ -1,6 +1,7 @@
+const path = require("path");
 module.exports = {
     siteMetadata: {
-        title: ``,
+        title: `Designo`,
         siteUrl: `https://www.yourdomain.tld`
     },
     plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-root-import",
@@ -8,15 +9,9 @@ module.exports = {
             resolve: 'gatsby-plugin-react-svg',
             options: {
                 rule: {
-                    include: /assets/
+                    include: /icons/
                 }
             }
         },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/src`,
-                name: `src`,
-            }
-        }]
+    ]
 };
