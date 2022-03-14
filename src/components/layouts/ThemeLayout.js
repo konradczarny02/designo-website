@@ -1,7 +1,7 @@
 import React from "react";
 import {ThemeProvider} from "styled-components";
-import {GlobalStyle} from "src/assets/styles/GlobalStyle";
-import {theme} from "src/assets/styles/theme";
+import {GlobalStyle} from "src/styles/GlobalStyle";
+import {theme} from "src/styles/theme";
 
 const ThemeLayout = ({children}) => {
     return (

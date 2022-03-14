@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components";
-import bgImg from 'src/assets/images/homepage/bg-pattern-hero-home.svg';
 import {Paragraph, Title} from "src/components/atoms/Titles";
 import {Button} from "src/components/atoms/Button";
 import {StaticImage} from "gatsby-plugin-image";
@@ -8,7 +7,6 @@ import {StaticImage} from "gatsby-plugin-image";
 export const BannerWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
-  background-image: url("${bgImg}");
   background-color: ${({theme}) => theme.colors.peach};
   background-size: cover;
   padding: 80px 10% 410px;
@@ -80,7 +78,7 @@ const HomepageBanner = () => {
             <Button to={'/'}>
                 LEARN MORE
             </Button>
-            <StaticImage objectFit="cover" src="../../../assets/images/homepage/phoneBig.png" alt="phone picture" />
+            <StaticImage objectFit="cover" src="../../../assets/homepage/phoneBig.png" alt="phone picture" />
         </BannerWrapper>
     )
 }

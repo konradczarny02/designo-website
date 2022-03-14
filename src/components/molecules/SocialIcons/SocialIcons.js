@@ -21,19 +21,19 @@ const SocialIcons = () => {
     return (
         <SocialIconsWrapper>
             <li>
-                <StaticImage src={'../../../assets/images/icons/facebook.svg'} alt="facebook logo"/>
+                <StaticImage src={'../../../icons/facebook.svg'} alt="facebook logo"/>
             </li>
             <li>
-                <StaticImage src={'../../../assets/images/icons/youtube.svg'} alt={'youtube logo'}/>
+                <StaticImage src={'../../../icons/youtube.svg'} alt={'youtube logo'}/>
             </li>
             <li>
-                <StaticImage src={'../../../assets/images/icons/twitter.svg'} alt={'twitter logo'}/>
+                <StaticImage src={'../../../icons/twitter.svg'} alt={'twitter logo'}/>
             </li>
             <li>
-                <StaticImage src={'../../../assets/images/icons/pinterest.svg'} alt={'pinterest logo'}/>
+                <StaticImage src={'../../../icons/pinterest.svg'} alt={'pinterest logo'}/>
             </li>
             <li>
-                <StaticImage src={'../../../assets/images/icons/instagram.svg'} alt={'instagram logo'}/>
+                <StaticImage src={'../../../icons/instagram.svg'} alt={'instagram logo'}/>
             </li>
         </SocialIconsWrapper>
     )
