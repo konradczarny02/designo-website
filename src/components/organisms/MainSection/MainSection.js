@@ -1,28 +1,7 @@
 import React from 'react'
-import {Link} from "gatsby";
 import styled from "styled-components"
 import SectionLink from "src/components/molecules/SectionLink/SectionLink";
-
-export const sectionLinksData = [
-    {
-        title: 'WEB DESIGN',
-        description: 'VIEW PROJECTS',
-        number: 1,
-        path: '/',
-    },
-    {
-        title: 'APP DESIGN',
-        description: 'VIEW PROJECTS',
-        number: 2,
-        path: '/',
-    },
-    {
-        title: 'GRAPHIC DESIGN',
-        description: 'VIEW PROJECTS',
-        number: 3,
-        path: '/',
-    },
-]
+import {sectionLinksData} from "src/data/homepageData";
 
 export const MainSectionWrapper = styled.section`
   width: 90%;
