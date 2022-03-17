@@ -13,6 +13,12 @@ export const AboutSectionWrapper = styled.section`
   @media (min-width: 700px) {
     grid-template-rows: repeat(3, 250px);
   }
+  
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 420px;
+    grid-column-gap: 10px;
+  }
 `;
 
 

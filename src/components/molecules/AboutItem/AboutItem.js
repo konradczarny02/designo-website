@@ -1,5 +1,5 @@
 import React from 'react'
-import {GatsbyImage, StaticImage} from "gatsby-plugin-image";
+import {StaticImage} from "gatsby-plugin-image";
 import styled from "styled-components";
 import bg from "src/assets/homepage/bg-pattern-small-circle.svg";
 
@@ -8,7 +8,7 @@ export const AboutItemWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  
+
   @media (min-width: 700px) {
     display: grid;
     grid-row-gap: 16px;
@@ -16,15 +16,24 @@ export const AboutItemWrapper = styled.div`
     grid-template-columns: 220px 1fr;
     grid-template-rows: 70px 150px
   }
-  
+
+  @media (min-width: 1400px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   div {
-    background-size: cover;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
     background-image: url("${bg}");
     @media (min-width: 700px) {
       grid-row: 1/3;
     }
   }
-  
+
   h3 {
     margin: 48px 0 32px;
     font-size: 20px;
@@ -32,12 +41,16 @@ export const AboutItemWrapper = styled.div`
     color: ${({theme}) => theme.colors.darkGrey};
 
     @media (min-width: 700px) {
-     grid-row: 1/2;
+      grid-row: 1/2;
       margin: auto 0 0;
       display: flex;
     }
+
+    @media (min-width: 1400px) {
+      text-align: center;
+    }
   }
-  
+
   p {
     color: ${({theme}) => theme.colors.darkGrey};
     font-weight: 400;
@@ -49,6 +62,10 @@ export const AboutItemWrapper = styled.div`
       text-align: left;
       margin: 0 0 auto;
     }
+
+    @media (min-width: 1400px) {
+      text-align: center;
+    }
   }
 
 `;
@@ -58,7 +75,7 @@ const AboutItem = ({data}) => {
     const path = `../../../assets/homepage/illustration-friendly.svg`
     return (
         <AboutItemWrapper>
-           <StaticImage objectFit="contain" src={path} alt="1" />
+            <StaticImage objectFit="contain" src={path} alt="1"/>
             <h3>{data.title}</h3>
             <p>{data.description}</p>
         </AboutItemWrapper>
