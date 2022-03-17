@@ -35,6 +35,8 @@ export const SectionLinkWrapper = styled.div`
         return bg2;
       case 3 :
         return bg3
+      default:
+          return bg;
     }
   }
   }");
@@ -48,6 +50,8 @@ export const SectionLinkWrapper = styled.div`
           return bg2Tablet;
         case 3 :
           return bg3Tablet;
+        default:
+            return bgTablet;
       }
     }
     }");
@@ -66,6 +70,8 @@ export const SectionLinkWrapper = styled.div`
           return bg2Desktop;
         case 3 :
           return bg3Desktop;
+        default:
+            return bgDesktop
       }
     }
     }");
@@ -103,7 +109,6 @@ export const SectionLinkWrapper = styled.div`
     letter-spacing: 0.45rem;
     width: 250px;
     z-index: 2;
-    display: flex;
     justify-content: center;
     align-items: center;
   }
