@@ -9,4 +9,10 @@ export const Button = styled(Link)`
   text-decoration: none;
   padding: 16px 24px;
   border-radius: 8px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: ${({theme}) => theme.colors.lightPeach};
+    color: ${({theme}) => theme.colors.white};
+  }
 `;

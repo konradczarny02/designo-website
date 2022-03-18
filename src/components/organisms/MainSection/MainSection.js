@@ -14,6 +14,8 @@ export const MainSectionWrapper = styled.section`
   @media (min-width: 1400px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 300px);
+    min-width: calc(1400px * 90%);
+    width: 80%;
   }
   
   div:first-child {

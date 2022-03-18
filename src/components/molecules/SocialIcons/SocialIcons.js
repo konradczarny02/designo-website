@@ -14,6 +14,15 @@ export const SocialIconsWrapper = styled.ul`
   li {
     list-style: none;
     margin: 0 8px;
+    cursor: pointer;
+  }
+  
+  li:last-child {
+    margin-right: 0;
+  }
+  
+  path {
+    fill: blue;
   }
 `;
 

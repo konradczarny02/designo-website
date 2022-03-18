@@ -12,6 +12,18 @@ export const NavigationWrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  
+  li {
+    cursor: pointer;
+  }
+  
+  @media (min-width: 700px) {
+    padding: 64px 5%;
+  }
+  
+  @media (min-width: 1400px) {
+    width: 90%;
+  }
 `;
 
 export const MobileNav = styled.ul`
@@ -27,7 +39,7 @@ export const MobileNav = styled.ul`
   justify-content: space-between;
   z-index: -1;
   transform: ${({isOpen}) => isOpen ? 'translateY(105px)' : 'translateY(-100%)'};
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   
   @media (min-width: 700px) {
     display: none;
@@ -38,6 +50,7 @@ export const MobileNav = styled.ul`
     font-size: 24px;
     color: ${({theme}) => theme.colors.white};
     font-weight: 400;
+    cursor: pointer;
   }
 `;
 
@@ -55,6 +68,10 @@ export const DesktopNav = styled.ul`
       font-size: 14px;
       font-weight: 400;
       letter-spacing: 0.15rem;
+      
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 `;
@@ -65,7 +82,7 @@ const Navigation = () => {
     return (
         <NavigationWrapper>
             <Logo isBlack={true}/>
-            <Hamburger onClick={() => setIsOpen(prevState => !prevState)}/>
+            <Hamburger isOpen={isOpen} onClick={() => setIsOpen(prevState => !prevState)}/>
             <DesktopNav>
                 <li>OUR COMPANY</li>
                 <li>LOCATIONS</li>

@@ -22,6 +22,8 @@ export const BannerWrapper = styled.div`
   }
 
   @media (min-width: 1400px) {
+    min-width: calc(1400px * 90%);
+    width: 80%;
     padding-top: 140px;
     padding-bottom: 140px;
   }

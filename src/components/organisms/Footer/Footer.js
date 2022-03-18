@@ -2,11 +2,17 @@ import React from 'react'
 import styled from "styled-components";
 import Logo from "src/components/atoms/Logo";
 import SocialIcons from "src/components/molecules/SocialIcons/SocialIcons";
+import ContactLink from "src/components/molecules/ContactLink/ContactLink";
 
 export const FooterWrapper = styled.footer`
-  padding-top: 240px;
+  padding: 254px 0 64px;
   width: 100%;
   background-color: ${({theme}) => theme.colors.black};
+  position: relative;
+  
+  @media (min-width: 700px) {
+    padding: 160px 0 80px;
+  }
   
   div:first-child {
     @media (min-width: 700px) {
@@ -25,6 +31,11 @@ export const ContentWrapper = styled.div`
   @media (min-width: 700px) {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  
+  @media (min-width: 1400px) {
+    min-width: calc(1400px * 90%);
+    width: 80%;
   }
 `;
 
@@ -47,6 +58,10 @@ export const Nav = styled.ul`
     flex-direction: row;
     margin-left: auto;
   }
+  
+  li:last-child {
+    margin-right: 0;
+  }
 
   li {
     list-style: none;
@@ -54,10 +69,18 @@ export const Nav = styled.ul`
     color: ${({theme}) => theme.colors.white};
     font-weight: 300;
     margin: 16px 0;
+    cursor: pointer;
+    
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: ${({theme}) => theme.colors.darkGrey};
+      text-decoration-thickness: 2px;
+    }
     
     @media (min-width: 700px) {
       margin: 16px 20px;
     }
+    
   }
 `
 
@@ -86,6 +109,7 @@ export const AddressInfo = styled.div`
 const Footer = () => {
     return (
         <FooterWrapper>
+            <ContactLink />
             <ContentWrapper>
                 <Logo isBlack={false}/>
                 <Line></Line>
