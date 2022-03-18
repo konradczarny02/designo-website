@@ -3,19 +3,19 @@ export const sectionLinksData = [
         title: 'WEB DESIGN',
         description: 'VIEW PROJECTS',
         number: 1,
-        path: '/',
+        path: '/web-design',
     },
     {
         title: 'APP DESIGN',
         description: 'VIEW PROJECTS',
         number: 2,
-        path: '/',
+        path: '/app-design',
     },
     {
         title: 'GRAPHIC DESIGN',
         description: 'VIEW PROJECTS',
         number: 3,
-        path: '/',
+        path: '/graphic-design',
     },
 ]
 

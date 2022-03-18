@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Logo from "src/components/atoms/Logo";
 import Hamburger from "src/components/atoms/Hamburger";
 import styled from "styled-components";
+import {Link} from "gatsby";
 
 export const NavigationWrapper = styled.nav`
   margin: 0 auto;
@@ -12,15 +13,20 @@ export const NavigationWrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  
+
   li {
     cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: ${({theme}) => theme.colors.darkGrey};
+    }
   }
-  
+
   @media (min-width: 700px) {
     padding: 64px 5%;
   }
-  
+
   @media (min-width: 1400px) {
     width: 90%;
   }
@@ -40,7 +46,7 @@ export const MobileNav = styled.ul`
   z-index: -1;
   transform: ${({isOpen}) => isOpen ? 'translateY(105px)' : 'translateY(-100%)'};
   transition: transform 0.3s ease-in-out;
-  
+
   @media (min-width: 700px) {
     display: none;
   }
@@ -51,24 +57,29 @@ export const MobileNav = styled.ul`
     color: ${({theme}) => theme.colors.white};
     font-weight: 400;
     cursor: pointer;
+    
+    a {
+      color: ${({theme}) => theme.colors.white};
+      cursor: pointer;
+    }
   }
 `;
 
 export const DesktopNav = styled.ul`
   display: none;
-  
+
   @media (min-width: 700px) {
     display: flex;
     justify-content: space-between;
     width: 380px;
     align-items: center;
-    
+
     li {
       list-style: none;
       font-size: 14px;
       font-weight: 400;
       letter-spacing: 0.15rem;
-      
+
       &:hover {
         text-decoration: underline;
       }
@@ -84,14 +95,14 @@ const Navigation = () => {
             <Logo isBlack={true}/>
             <Hamburger isOpen={isOpen} onClick={() => setIsOpen(prevState => !prevState)}/>
             <DesktopNav>
-                <li>OUR COMPANY</li>
-                <li>LOCATIONS</li>
-                <li>CONTACT</li>
+                <li><Link to="/about">OUR COMPANY</Link></li>
+                <li><Link to="/locations">LOCATIONS</Link></li>
+                <li><Link to="/contact">CONTACT</Link></li>
             </DesktopNav>
             <MobileNav isOpen={isOpen}>
-                <li>OUR COMPANY</li>
-                <li>LOCATIONS</li>
-                <li>CONTACT</li>
+                <li><Link to="/about">OUR COMPANY</Link></li>
+                <li><Link to="/locations">LOCATIONS</Link></li>
+                <li><Link to="/contact">CONTACT</Link></li>
             </MobileNav>
         </NavigationWrapper>
     )

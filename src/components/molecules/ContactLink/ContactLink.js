@@ -72,7 +72,7 @@ const ContactLink = () => {
                     business grow.
                 </Paragraph>
             </TextWrapper>
-            <Button to="/">GET IN TOUCH</Button>
+            <Button to="/contact">GET IN TOUCH</Button>
         </ContactLinkWrapper>
     )
 }

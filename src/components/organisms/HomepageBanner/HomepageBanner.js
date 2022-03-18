@@ -14,7 +14,7 @@ export const BannerWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
-  z-index: -222;
+  z-index: -2;
 
   @media (min-width: 700px) {
     width: 90%;
@@ -77,7 +77,7 @@ const HomepageBanner = () => {
                 With over 10 years in the industry, we are experienced in creating fully responsive websites, app
                 design, and engaging brand experiences. Find out more about our services.
             </Paragraph>
-            <Button to={'/'}>
+            <Button to={'/about'}>
                 LEARN MORE
             </Button>
             <StaticImage objectFit="cover" src="../../../assets/homepage/phoneBig.png" alt="phone picture" />
