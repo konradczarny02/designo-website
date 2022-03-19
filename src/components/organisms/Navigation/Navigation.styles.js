@@ -9,6 +9,7 @@ export const NavigationWrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  z-index: 2;
 
   li {
     cursor: pointer;
@@ -39,7 +40,7 @@ export const MobileNav = styled.ul`
   flex-direction: column;
   padding: 48px 24px;
   justify-content: space-between;
-  z-index: -1;
+  z-index: 1;
   transform: ${({isOpen}) => isOpen ? 'translateY(105px)' : 'translateY(-100%)'};
   transition: transform 0.3s ease-in-out;
 
@@ -52,11 +53,11 @@ export const MobileNav = styled.ul`
     font-size: 24px;
     color: ${({theme}) => theme.colors.white};
     font-weight: 400;
-    cursor: pointer;
     
     a {
       color: ${({theme}) => theme.colors.white};
       cursor: pointer;
+      text-decoration: none;
     }
   }
 `;

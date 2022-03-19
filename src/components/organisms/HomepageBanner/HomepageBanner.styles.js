@@ -12,7 +12,7 @@ export const BannerWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
-  z-index: -2;
+  z-index: 0;
 
   @media (min-width: 700px) {
     width: 90%;
