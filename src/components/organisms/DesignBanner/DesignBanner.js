@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import bg from 'src/assets/homepage/bg-pattern-small-circle.svg'
+import bg from 'src/assets/web-design/desktop/bg-pattern-intro-web.svg'
 import {Paragraph, Title} from "src/components/atoms/Titles";
 
 export const DesignBannerWrapper = styled.div`
@@ -8,7 +8,8 @@ export const DesignBannerWrapper = styled.div`
   padding: 104px 24px;
   background-color: ${({theme}) => theme.colors.peach};
   background-image: url("${bg}");
-  background-size: contain;
+  background-size: 80%;
+  background-position: 40% 50%;
   z-index: -222;
   position: relative;
 

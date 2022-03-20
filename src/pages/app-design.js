@@ -1,23 +1,29 @@
 import React from 'react'
-import styled from "styled-components";
 import DesignLayout from "src/components/layouts/DesignLayout";
-
-const Div = styled.div`
-  width: 90%;
-  height: 1000px;
-  background-color: aliceblue;
-  margin: 0 auto;
-`;
+import DesignLinks from "src/components/organisms/DesignLinks/DesignLinks";
 
 const data = {
     title: 'App Design',
     desc: 'Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.'
 }
 
+const links = [
+    {
+        title: 'WEB DESIGN',
+        description: 'VIEW PROJECTS',
+        path: '/web-design',
+    },
+    {
+        title: 'GRAPHIC DESIGN',
+        description: 'VIEW PROJECTS',
+        path: '/graphic-design',
+    }
+]
+
 const AppDesign = () => {
     return (
         <DesignLayout data={data}>
-            <Div />
+            <DesignLinks data={links}/>
         </DesignLayout>
     )
 }
