@@ -1,23 +1,30 @@
 import React from 'react'
-import styled from "styled-components";
 import DesignLayout from "src/components/layouts/DesignLayout";
+import DesignLinks from "src/components/organisms/DesignLinks/DesignLinks";
 
-const Div = styled.div`
-  width: 90%;
-  height: 1000px;
-  background-color: aliceblue;
-  margin: 0 auto;
-`;
 
 const data = {
     title: 'Graphic Design',
     desc: 'We deliver eye-catching branding materials that are tailored to meet your business objectives.'
 }
 
+const links = [
+    {
+        title: 'APP DESIGN',
+        description: 'VIEW PROJECTS',
+        path: '/app-design',
+    },
+    {
+        title: 'WEB DESIGN',
+        description: 'VIEW PROJECTS',
+        path: '/web-design',
+    }
+]
+
 const GraphicDesign = () => {
     return (
         <DesignLayout data={data}>
-            <Div />
+            <DesignLinks data={links}/>
         </DesignLayout>
     )
 }
