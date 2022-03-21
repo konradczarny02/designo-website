@@ -27,7 +27,7 @@ export const DesignLinksWrapper = styled.div`
 const DesignLinks = ({data}) => {
     return (
         <DesignLinksWrapper>
-            {data.map(link => (<DesignLink data={link} />))}
+            {data.map(link => (<DesignLink key={link.id} data={link} />))}
         </DesignLinksWrapper>
     )
 }

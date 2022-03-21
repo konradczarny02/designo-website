@@ -1,29 +1,11 @@
 import React from 'react'
 import DesignLayout from "src/components/layouts/DesignLayout";
 import DesignLinks from "src/components/organisms/DesignLinks/DesignLinks";
-
-
-const data = {
-    title: 'Graphic Design',
-    desc: 'We deliver eye-catching branding materials that are tailored to meet your business objectives.'
-}
-
-const links = [
-    {
-        title: 'APP DESIGN',
-        description: 'VIEW PROJECTS',
-        path: '/app-design',
-    },
-    {
-        title: 'WEB DESIGN',
-        description: 'VIEW PROJECTS',
-        path: '/web-design',
-    }
-]
+import {graphicDesignLinks as links, graphicDesignData as pageData} from "src/data/pagesData";
 
 const GraphicDesign = () => {
     return (
-        <DesignLayout data={data}>
+        <DesignLayout data={pageData}>
             <DesignLinks data={links}/>
         </DesignLayout>
     )

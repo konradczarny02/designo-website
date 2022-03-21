@@ -6,6 +6,7 @@ export const theme = {
         lightPeach: '#ffad9b',
         darkGrey: '#333136',
         lightGrey: '#f1f3f5',
+        beige: '#FDF3F0',
     },
     md: {
         tablet: '@media (min-width: 768px)',

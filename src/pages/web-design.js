@@ -1,31 +1,37 @@
 import React from 'react'
 import DesignLayout from "src/components/layouts/DesignLayout";
 import DesignLinks from "src/components/organisms/DesignLinks/DesignLinks";
+import {webDesignLinks as links, webDesignData as pageData} from "src/data/pagesData";
+import {graphql} from "gatsby";
+import ProjectsList from "src/components/organisms/ProjectsList/ProjectsList";
 
-const data = {
-    title: 'Web Design',
-    desc: 'We build websites that serve as powerful marketing tools and bring memorable brand experiences.'
-}
 
-const links = [
-    {
-        title: 'APP DESIGN',
-        description: 'VIEW PROJECTS',
-        path: '/app-design',
-    },
-    {
-        title: 'GRAPHIC DESIGN',
-        description: 'VIEW PROJECTS',
-        path: '/graphic-design',
-    }
-]
-
-const WebDesign = () => {
+const WebDesign = ({data}) => {
+    const projectsData = data.allDatoCmsProject.edges;
     return (
-        <DesignLayout data={data}>
+        <DesignLayout data={pageData}>
+            <ProjectsList data={projectsData} />
             <DesignLinks data={links} />
         </DesignLayout>
     )
 }
 
 export default WebDesign
+
+export const query = graphql`
+query MyQuery {
+  allDatoCmsProject {
+    edges {
+      node {
+        description
+        id
+        name
+        image {
+          gatsbyImageData(width: 600, forceBlurhash: false, placeholder: BLURRED)
+          title
+        }
+      }
+    }
+  }
+}
+`;
