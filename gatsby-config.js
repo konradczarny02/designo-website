@@ -13,5 +13,11 @@ module.exports = {
                 }
             }
         },
+        {
+            resolve: `gatsby-source-datocms`,
+            options: {
+                apiToken: `af2095c52afbdfeb146564f526f1bf`,
+            }
+        }
     ]
 };
