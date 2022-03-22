@@ -23,10 +23,6 @@ export const AboutItemWrapper = styled.div`
   }
 
   div {
-    width: 200px;
-    height: 200px;
-    background-size: contain;
-    background-image: url("${bg}");
     @media (min-width: 700px) {
       grid-row: 1/3;
     }

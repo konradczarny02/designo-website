@@ -6,10 +6,10 @@ import {aboutData} from "src/data/homepageData";
 
 
 
-const AboutSection = () => {
+const AboutSection = ({data}) => {
     return (
         <AboutSectionWrapper>
-            {aboutData.map(aboutItem => (<AboutItem key={aboutItem.title} data={aboutItem}/>))}
+            {data.map(({node}) => (<AboutItem key={node.id} data={node} />))}
         </AboutSectionWrapper>
     )
 }
