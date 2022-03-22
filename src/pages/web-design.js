@@ -19,15 +19,15 @@ const WebDesign = ({data}) => {
 export default WebDesign
 
 export const query = graphql`
-query MyQuery {
-  allDatoCmsProject {
+query MyWebQuery {
+  allDatoCmsProject(filter: {category: {eq: "web"}}) {
     edges {
       node {
         description
         id
         name
         image {
-          gatsbyImageData(width: 600, forceBlurhash: false, placeholder: BLURRED)
+          gatsbyImageData(width: 500, forceBlurhash: false, placeholder: BLURRED)
           title
         }
       }

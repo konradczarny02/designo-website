@@ -3,7 +3,6 @@ import {StaticImage} from "gatsby-plugin-image";
 import {AboutItemWrapper} from "src/components/molecules/AboutItem/AboutItem.styles";
 
 const AboutItem = ({data}) => {
-    console.log(data.imgPath)
     const path = `../../../assets/homepage/illustration-friendly.svg`
     return (
         <AboutItemWrapper>
