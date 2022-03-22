@@ -9,7 +9,7 @@ import {aboutData} from "src/data/homepageData";
 const AboutSection = () => {
     return (
         <AboutSectionWrapper>
-            {aboutData.map(aboutItem => (<AboutItem data={aboutItem}/>))}
+            {aboutData.map(aboutItem => (<AboutItem key={aboutItem.title} data={aboutItem}/>))}
         </AboutSectionWrapper>
     )
 }

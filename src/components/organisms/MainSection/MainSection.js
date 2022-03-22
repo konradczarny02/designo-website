@@ -8,7 +8,7 @@ const MainSection = () => {
     return (
         <MainSectionWrapper>
             {sectionLinksData.map(sectionLink => (
-            <SectionLink data={sectionLink}/>
+            <SectionLink key={sectionLink.number} data={sectionLink} />
             ))}
         </MainSectionWrapper>
     )
