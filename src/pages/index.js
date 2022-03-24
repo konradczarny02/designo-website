@@ -2,7 +2,7 @@ import React from 'react';
 import MainLayout from "src/components/layouts/MainLayout";
 import HomepageBanner from "src/components/organisms/HomepageBanner/HomepageBanner";
 import MainSection from "src/components/organisms/MainSection/MainSection";
-import AboutSection from "src/components/organisms/AboutSection/AboutSection";
+import BenefitsSection from "src/components/organisms/BenefitsSection/BenefitsSection";
 import {graphql} from "gatsby";
 
 const HomePage = ({data}) => {
@@ -11,7 +11,7 @@ const HomePage = ({data}) => {
         <MainLayout>
             <HomepageBanner />
             <MainSection />
-            <AboutSection data={benefitData} />
+            <BenefitsSection data={benefitData} />
         </MainLayout>
     )
 }
