@@ -1,10 +1,11 @@
 import React from 'react'
 import MainLayout from "src/components/layouts/MainLayout";
+import AboutBanner from "src/components/molecules/AboutBanner/AboutBanner";
 
 const About = () => {
     return (
         <MainLayout>
-            <h2>about</h2>
+            <AboutBanner />
         </MainLayout>
     )
 }

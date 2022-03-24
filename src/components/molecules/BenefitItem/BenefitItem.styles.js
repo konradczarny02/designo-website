@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import bg from "src/assets/homepage/bg-pattern-small-circle.svg";
 
-export const AboutItemWrapper = styled.div`
+export const BenefitItemWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

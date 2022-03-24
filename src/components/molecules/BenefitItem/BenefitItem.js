@@ -1,15 +1,15 @@
 import React from 'react'
 import {GatsbyImage} from "gatsby-plugin-image";
-import {AboutItemWrapper} from "src/components/molecules/AboutItem/AboutItem.styles";
+import {BenefitItemWrapper} from "src/components/molecules/BenefitItem/BenefitItem.styles";
 
-const AboutItem = ({data}) => {
+const BenefitItem = ({data}) => {
     return (
-        <AboutItemWrapper>
+        <BenefitItemWrapper>
             <GatsbyImage image={data.image.gatsbyImageData} alt={data.title} />
             <h3>{data.title}</h3>
             <p>{data.description}</p>
-        </AboutItemWrapper>
+        </BenefitItemWrapper>
     )
 }
 
-export default AboutItem;
+export default BenefitItem;

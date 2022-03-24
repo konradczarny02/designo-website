@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AboutSectionWrapper = styled.section`
+export const BenefitsSectionWrapper = styled.section`
   margin: 0 auto 310px;
   width: 90%;
   display: grid;
