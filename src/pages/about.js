@@ -24,6 +24,7 @@ query MyLocationQuery {
     edges {
       node {
         name
+        id
         icon {
           gatsbyImageData(height: 200, forceBlurhash: false, placeholder: BLURRED)
         }

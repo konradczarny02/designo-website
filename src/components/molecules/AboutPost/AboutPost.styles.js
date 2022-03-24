@@ -7,7 +7,7 @@ import {Paragraph, Title} from "src/components/atoms/Titles";
 
 export const AboutPostWrapper = styled.div`
   height: 850px;
-  margin: 0 auto 310px;
+  margin: 0 auto;
   
   @media (min-width: 700px) {
     width: 90%;
