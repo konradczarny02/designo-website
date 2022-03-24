@@ -2,6 +2,9 @@ import styled from "styled-components";
 import bgMobile from 'src/assets/about/mobile/image-world-class-talent.jpg';
 import bgTablet from 'src/assets/about/tablet/image-world-class-talent.jpg';
 import bgDesktop from 'src/assets/about/desktop/image-world-class-talent.jpg';
+import bgMobile2 from 'src/assets/about/mobile/image-real-deal.jpg'
+import bgTablet2 from 'src/assets/about/tablet/image-real-deal.jpg'
+import bgDesktop2 from 'src/assets/about/desktop/image-real-deal.jpg'
 import bgSvg from 'src/assets/about/desktop/bg-pattern-hero-about-desktop.svg'
 import {Paragraph, Title} from "src/components/atoms/Titles";
 
@@ -77,3 +80,27 @@ export const AboutPostWrapper = styled.div`
     }
   }
 `;
+
+export const DealPostWrapper = styled(AboutPostWrapper)`
+  margin-bottom: 310px;
+  
+  div:first-child {
+    background-image: url("${bgMobile2}");
+    order: 2;
+    
+    @media (min-width: 700px) {
+      background-image: url("${bgTablet2}");
+    }
+    
+    @media (min-width: 1400px) {
+      background-image: url("${bgDesktop2}");
+      border-radius: 0 10px 10px 0;
+    }
+  }
+    div:last-child {
+      @media (min-width: 1400px) {
+        border-radius: 10px 0 0 10px;
+      }
+    }
+`;
+
