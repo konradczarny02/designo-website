@@ -1,8 +1,8 @@
 import React from 'react'
-import {AboutPostWrapper} from "src/components/molecules/AboutPost/AboutPost.styles";
+import {AboutPostWrapper} from "src/components/molecules/AboutPosts/AboutPost.styles";
 import {Paragraph, Title} from "src/components/atoms/Titles";
 
-const AboutPost = () => {
+const TalentPost = () => {
     return (
         <AboutPostWrapper>
             <div></div>
@@ -24,4 +24,4 @@ const AboutPost = () => {
     )
 }
 
-export default AboutPost
+export default TalentPost
