@@ -9,7 +9,6 @@ export const LocationsListWrapper = styled.div`
   grid-gap: 80px;
   
   @media (min-width: 700px) {
-    margin-bottom: 380px;
   }
   
   @media (min-width: 1400px) {

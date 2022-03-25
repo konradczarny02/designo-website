@@ -1,16 +1,16 @@
 import React from 'react'
+import ThemeLayout from "src/components/layouts/ThemeLayout";
 import Navigation from "src/components/organisms/Navigation/Navigation";
 import Footer from "src/components/organisms/Footer/Footer";
-import ThemeLayout from "src/components/layouts/ThemeLayout";
 
-const MainLayout = ({children}) => {
+const ContactLayout = ({children}) => {
     return (
         <ThemeLayout>
             <Navigation />
             {children}
-            <Footer isContact={true} />
+            <Footer isContact={false} />
         </ThemeLayout>
     )
 }
 
-export default MainLayout
+export default ContactLayout
