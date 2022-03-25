@@ -5,10 +5,10 @@ import SocialIcons from "src/components/molecules/SocialIcons/SocialIcons";
 import ContactLink from "src/components/molecules/ContactLink/ContactLink";
 import {Link} from "gatsby";
 
-const Footer = () => {
+const Footer = ({isContact}) => {
     return (
         <FooterWrapper>
-            <ContactLink/>
+            {isContact && <ContactLink/>}
             <ContentWrapper>
                 <Logo isBlack={false}/>
                 <Line></Line>
