@@ -13,7 +13,7 @@ const Footer = () => {
                 <Logo isBlack={false}/>
                 <Line></Line>
                 <Nav>
-                    <li><Link to="/about">OUR COMPANY</Link></li>
+                    <li><Link to="/">OUR COMPANY</Link></li>
                     <li><Link to="/locations">LOCATIONS</Link></li>
                     <li><Link to="/contact">CONTACT</Link></li>
                 </Nav>
@@ -33,4 +33,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default Footer;

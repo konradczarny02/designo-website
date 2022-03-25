@@ -4,8 +4,6 @@ import Hamburger from "src/components/atoms/Hamburger";
 import {NavigationWrapper, DesktopNav, MobileNav} from "src/components/organisms/Navigation/Navigation.styles";
 import {Link} from "gatsby";
 
-
-
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false)
 

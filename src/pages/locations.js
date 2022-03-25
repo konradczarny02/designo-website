@@ -1,6 +1,6 @@
 import React from 'react'
 import MainLayout from "src/components/layouts/MainLayout";
-import LocationDetailedList from "src/components/organisms/LocationsDetailedList/LocationDetailedList";
+import LocationDetailedList from "src/components/organisms/DetailedLocationsList/DetailedLocationsList";
 import {graphql} from "gatsby";
 
 const Locations = ({data}) => {

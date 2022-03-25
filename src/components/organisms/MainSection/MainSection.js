@@ -3,7 +3,6 @@ import {MainSectionWrapper} from "src/components/organisms/MainSection/MainSecti
 import SectionLink from "src/components/molecules/SectionLink/SectionLink";
 import {sectionLinksData} from "src/data/homepageData";
 
-
 const MainSection = () => {
     return (
         <MainSectionWrapper>
