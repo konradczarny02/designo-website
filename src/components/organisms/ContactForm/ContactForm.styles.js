@@ -66,9 +66,28 @@ export const ContactFormWrapper = styled.div`
       border-bottom: 1px solid ${({theme}) => theme.colors.lightGrey};
       padding: 24px 0 12px 12px;
       font-weight: 500;
+      font-size: 15px;
       
       @media (min-width: 700px) {
         padding-top: 24px;
+      }
+    }
+    
+    label {
+      position: relative;
+    }
+    
+    span {
+      position: absolute;
+      top: 2px;
+      right: 12px;
+      font-size: 12px;
+      color: ${({theme}) => theme.colors.white};
+      display: flex;
+      align-items: center;
+      
+      svg {
+        margin-left: 10px;
       }
     }
     
@@ -107,6 +126,7 @@ export const ContactFormWrapper = styled.div`
       font-size: 15px;
       height: 100px;
       padding: 24px 0 0 12px;
+      font-family: 'Jost', sans-serif;
     }
     
     textarea::placeholder {
@@ -132,6 +152,7 @@ export const ContactFormWrapper = styled.div`
       color: ${({theme}) => theme.colors.darkGrey};
       padding: 0;
       margin: 40px auto 0;
+      cursor: pointer;
       
       &:hover {
         background-color: ${({theme}) => theme.colors.lightPeach};
