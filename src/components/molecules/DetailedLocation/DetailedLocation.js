@@ -3,7 +3,6 @@ import {DetailedLocationWrapper, Details} from "src/components/molecules/Detaile
 import {GatsbyImage} from "gatsby-plugin-image";
 
 const DetailedLocation = ({data}) => {
-    console.log(data)
     return (
         <DetailedLocationWrapper>
             <GatsbyImage alt={data.name} image={data.mapImage.gatsbyImageData}/>

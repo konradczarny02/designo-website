@@ -4,7 +4,6 @@ import {ProjectWrapper, ProjectDetails} from "src/components/molecules/Project/P
 
 
 const Project = ({data}) => {
-    console.log(data)
     return (
         <ProjectWrapper>
             <GatsbyImage image={data.image.gatsbyImageData} alt={data.name}/>

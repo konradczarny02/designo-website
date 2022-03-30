@@ -4,7 +4,6 @@ import {ProjectListWrapper} from "src/components/organisms/ProjectsList/ProjectL
 
 
 const ProjectsList = ({data}) => {
-    console.log(data);
     return (
         <ProjectListWrapper>
             {data.map(project => (
