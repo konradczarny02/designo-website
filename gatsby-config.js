@@ -1,4 +1,7 @@
 const path = require("path");
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
     siteMetadata: {
         title: `Designo`,
@@ -16,7 +19,7 @@ module.exports = {
         {
             resolve: `gatsby-source-datocms`,
             options: {
-                apiToken: `af2095c52afbdfeb146564f526f1bf`,
+                apiToken: process.env.API_KEY,
             }
         }
     ]
