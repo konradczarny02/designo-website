@@ -1,30 +1,15 @@
-import React, {useReducer} from 'react'
+import React from 'react'
 import {Paragraph, Title} from "src/components/atoms/Titles";
 import {ContactFormWrapper} from "src/components/organisms/ContactForm/ContactForm.styles";
 import RequiredIcon from 'src/icons/required.svg'
+import {useForm} from "react-hook-form";
 
-const initialState = {
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-}
 
-const reducer = (state, action) => {
-    if (action.type === 'CHANGE_VALUE') {
-        return {
-            ...state,
-            [action.payload.name]: action.payload.value
-        }
-    }
-
-    return state;
-}
 
 const ContactForm = () => {
-    const [state, dispatch] = useReducer(reducer, initialState);
-    const handleInputChange = (name, value) => {
-        dispatch({type: 'CHANGE_VALUE', payload: {name, value}})
+    const {register, handleSubmit, formState: {errors}, reset} = useForm()
+    const onSubmit = data => {
+        reset()
     }
     return (
         <ContactFormWrapper>
@@ -36,24 +21,22 @@ const ContactForm = () => {
                     users, drop us a line.
                 </Paragraph>
             </div>
-            <form onSubmit={(event) => {
-                event.preventDefault();
-            }}>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="name">
-                    <input type="text" name="name" id="name" placeholder="Name"
-                           onChange={(event) => handleInputChange(event.target.name, event.target.value)}/>
+                    <input type="text" name="name" id="name" placeholder="Name" {...register('name', {required: true})} />
+                    {errors.name && <p>Can't be empty <RequiredIcon /></p>}
                 </label>
                 <label htmlFor="email">
-                    <input type="email" name="email" id="email" required={false} placeholder="Email Address"
-                           onChange={(event) => handleInputChange(event.target.name, event.target.value)}/>
+                    <input type="email" name="email" id="email" required={false} placeholder="Email Address" {...register('email', {required: true})} />
+                    {errors.email && <p>Can't be empty <RequiredIcon /></p>}
                 </label>
                 <label htmlFor="phone">
-                    <input type="tel" name="phone" id="phone" placeholder="Phone"
-                           onChange={(event) => handleInputChange(event.target.name, event.target.value)}/>
+                    <input type="tel" name="phone" id="phone" placeholder="Phone: 123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" {...register('phone', {required: true})} />
+                    {errors.phone && <p>Can't be empty <RequiredIcon /></p>}
                 </label>
                 <label htmlFor="message">
-                    <textarea name="message" id="message" placeholder="Your Message"
-                              onChange={(event) => handleInputChange(event.target.name, event.target.value)}/>
+                    <textarea name="message" id="message" placeholder="Your Message" {...register('message', {required: true})} />
+                    {errors.message && <p data-name="last">Can't be empty <RequiredIcon /></p>}
                 </label>
                 <input type="submit" value="SUBMIT"/>
             </form>

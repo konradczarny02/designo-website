@@ -77,7 +77,7 @@ export const ContactFormWrapper = styled.div`
       position: relative;
     }
     
-    span {
+    p {
       position: absolute;
       top: 2px;
       right: 12px;
@@ -89,6 +89,10 @@ export const ContactFormWrapper = styled.div`
       svg {
         margin-left: 10px;
       }
+    }
+    
+    p[data-name=last] {
+      top: -56px;
     }
     
     input::placeholder {

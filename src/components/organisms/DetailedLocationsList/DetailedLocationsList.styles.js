@@ -15,7 +15,7 @@ export const DetailedLocationsListWrapper = styled.div`
     width: 80%;
     
     div:nth-child(2n) {
-      grid-template-columns: 350px 1fr;
+      grid-template-columns: 3fr 4fr;
       
       div:first-child {
         grid-column: 1/2;

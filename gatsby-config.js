@@ -21,6 +21,12 @@ module.exports = {
             options: {
                 apiToken: process.env.API_KEY,
             }
+        },
+        {
+            resolve: 'gatsby-plugin-react-leaflet',
+            options: {
+                linkStyles: true
+            }
         }
     ]
 };

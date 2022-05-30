@@ -13,7 +13,7 @@ const Navigation = () => {
             <Logo isBlack={true}/>
             <Hamburger isOpen={isOpen} onClick={() => setIsOpen(prevState => !prevState)}/>
             <DesktopNav>
-                <li><Link to="/">OUR COMPANY</Link></li>
+                <li><Link to="/about">OUR COMPANY</Link></li>
                 <li><Link to="/locations">LOCATIONS</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
             </DesktopNav>

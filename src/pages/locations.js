@@ -17,19 +17,20 @@ export default Locations
 export const query = graphql`
 query MyDetailedLocationQuery {
   allDatoCmsLocation {
-    edges {
-      node {
-        name
-        street
-        phone
-        mapImage {
-          gatsbyImageData(height: 320, forceBlurhash: false, placeholder: BLURRED)
-        }
-        city
-        id
-        mail
+      edges {
+          node {
+              coordinates {
+                  latitude
+                  longitude
+              }
+              name
+              street
+              phone
+              city
+              id
+              mail
+          }
       }
-    }
   }
 }
 `

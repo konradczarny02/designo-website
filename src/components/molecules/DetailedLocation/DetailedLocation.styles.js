@@ -11,7 +11,7 @@ export const DetailedLocationWrapper = styled.div`
   }
   
   @media (min-width: 1400px) {
-    grid-template-columns: 1fr 350px;
+    grid-template-columns: 4fr 3fr;
   }
   
   div:first-child {
