@@ -7,6 +7,7 @@ export const MainSectionWrapper = styled.section`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 250px);
   grid-gap: 24px;
+  max-width: 1500px;
   
   @media (min-width: 1400px) {
     grid-template-columns: repeat(2, 1fr);

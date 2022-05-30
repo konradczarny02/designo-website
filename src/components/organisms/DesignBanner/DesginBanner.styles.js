@@ -11,6 +11,7 @@ export const DesignBannerWrapper = styled.div`
   background-position: 40% 50%;
   z-index: -222;
   position: relative;
+  max-width: 1500px;
 
   @media (min-width: 700px) {
     width: 90%;

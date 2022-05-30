@@ -7,6 +7,7 @@ export const DesignLinksWrapper = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 24px;
+  max-width: 1500px;
   
   
   @media (min-width: 700px) {

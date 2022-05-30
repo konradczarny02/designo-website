@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const LocationsListWrapper = styled.div`
-  width: 90%;
+  width: 100%;
   margin: 120px auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 370px);
   grid-gap: 80px;
+  max-width: 1500px;
   
   @media (min-width: 700px) {
   }

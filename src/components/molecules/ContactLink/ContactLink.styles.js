@@ -18,6 +18,7 @@ export const ContactLinkWrapper = styled.div`
   position: absolute;
   top: -190px;
   left: 5%;
+  max-width: 1500px;
 
   @media (min-width: 700px) {
     height: 350px;
@@ -26,7 +27,7 @@ export const ContactLinkWrapper = styled.div`
   }
 
   @media (min-width: 1400px) {
-    left: 10%;
+    left: calc((100vw - 80% ) / 2);
     top: -220px;
     width: 80%;
     height: 300px;
@@ -35,6 +36,10 @@ export const ContactLinkWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     background-size: 30%;
+  }
+  
+  @media (min-width: 1875px) {
+    left: calc((100vw - 1500px ) / 2);
   }
 
   ${Title} {

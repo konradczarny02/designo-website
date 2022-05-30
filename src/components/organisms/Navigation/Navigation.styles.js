@@ -10,6 +10,7 @@ export const NavigationWrapper = styled.nav`
   align-items: center;
   position: relative;
   z-index: 2;
+  max-width: 1500px;
 
   li {
     cursor: pointer;
@@ -25,7 +26,8 @@ export const NavigationWrapper = styled.nav`
   }
 
   @media (min-width: 1400px) {
-    width: 90%;
+    width: 80%;
+    padding: 64px 0;
   }
 `;
 

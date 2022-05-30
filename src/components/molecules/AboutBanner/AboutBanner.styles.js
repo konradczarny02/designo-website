@@ -9,6 +9,7 @@ export const AboutBannerWrapper = styled.div`
   width: 100%;
   height: 700px;
   margin: 0 auto 0;
+  max-width: 1500px;
   
   @media (min-width: 700px) {
     width: 90%;

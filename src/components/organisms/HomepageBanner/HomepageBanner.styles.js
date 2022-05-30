@@ -13,6 +13,7 @@ export const BannerWrapper = styled.div`
   justify-content: center;
   position: relative;
   z-index: 0;
+  max-width: 1500px;
 
   @media (min-width: 700px) {
     width: 90%;

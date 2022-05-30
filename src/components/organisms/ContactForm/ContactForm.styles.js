@@ -8,6 +8,7 @@ export const ContactFormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  max-width: 1500px;
   
   @media (min-width: 700px) {
     width: 90%;

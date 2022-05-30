@@ -23,6 +23,7 @@ export const ContentWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   width: 90%;
+  max-width: 1500px;
 
   @media (min-width: 700px) {
     flex-direction: row;

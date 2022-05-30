@@ -6,6 +6,7 @@ export const ProjectListWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 30px;
+  max-width: 1500px;
   
   @media (min-width: 1400px) {
     width: 80%;

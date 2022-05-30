@@ -5,6 +5,7 @@ export const DetailedLocationsListWrapper = styled.div`
   width: 100%;
   display: grid;
   grid-gap: 40px;
+  max-width: 1500px;
   
   @media (min-width: 700px) {
     width: 90%;

@@ -6,6 +6,7 @@ export const BenefitsSectionWrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 420px);
+  max-width: 1500px;
   
   @media (min-width: 700px) {
     grid-template-rows: repeat(3, 250px);
