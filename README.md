@@ -1,7 +1,7 @@
 # Designo Website
 
 ### This is my solution to: [Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/designo-multipage-website-G48K6rfUT "Frontend Mentor Challenge")
-### [Live Version](https://designo-website-lemon.vercel.app/locations "Live version")
+### [Live Version](https://designo-website-lemon.vercel.app/ "Live version")
 
 ### Overview: 
 I used Gatsby.js to build this project. This project doesn't contain any complex business logic. It's mostly about styling and responsiveness.
