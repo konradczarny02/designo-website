@@ -19,6 +19,6 @@ I tried to build reusable components to make code DRY.
 - [Gatsby.js](https://www.gatsbyjs.com/ "Gatsby.js")
 - [GraphQL](https://graphql.org/ "GraphQL")
 - [React Leaflet](https://react-leaflet.js.org/ "React Leaflet")
-- [React Hook Form](https://react-hook-form.com/get-started "React-hook-form)
+- [React Hook Form](https://react-hook-form.com/get-started "React-hook-form")
 - [DATOCMS](https://www.datocms.com/ "DATOCMS")
 - [Styled Components](https://styled-components.com/ "Styled Components")
